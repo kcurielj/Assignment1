@@ -1,0 +1,39 @@
+<!--********************************************************
+* File: contact.ejs
+* Student: Kevin Eduardo Curiel Justo
+* ID: 301214229
+* Date: 04/Jun/22
+********************************************************/-->
+
+<% include partials/header.ejs %>
+<style>
+    .p3 {
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+    
+</style>
+
+  <h1 class="p3"><%= title %></h1>
+  <body style="background-color:powderblue;"></body>
+  <p class="p3">Contact information <%= title %></p>
+  <p class="p3">Email: kevec123@gmail.com</p>
+  <p class="p3">Phone: 809-460-9601</p>
+  <a href="/about"> 
+  <p class="p3">https://www.linkedin.com/feed/</p>
+  </a>
+
+  <h2 class="p3">Send a direct message</h2>
+
+<form action="/action_page.php">
+  <label class="p3" for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label class="p3" for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <label class="p3" for="contactnum">Contact number:</label><br>
+  <input type="number" id="contactnum" name="contactnum"><br>
+  <label class="p3" for="email">Email address:</label><br>
+  <input type="text" id="email" name="email"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<% include partials/footer.ejs %>

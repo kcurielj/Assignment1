@@ -1,0 +1,45 @@
+<!--********************************************************
+* File: projects.ejs
+* Student: Kevin Eduardo Curiel Justo
+* ID: 301214229
+* Date: 04/Jun/22
+********************************************************/-->
+
+<% include partials/header.ejs %>
+<style>
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+</style>
+
+
+  <h1 class="p3"><%= title %></h1>
+  <body style="background-color:powderblue;" ></body>
+   
+  <br><h3 class="p3"><%= header1 %></h3> 
+  <p class="p3"><%= param1 %></p>
+  <% if (title == "Projects") { %>
+    <img 
+        src="/images/Hardlight.jpg" 
+        style="width:800px;">
+  <% } else { %>
+    <img src="/images/Unity.jpg">
+  <% } %> 
+
+  <br><br><h3 class="p3"><%= header2 %></h3> 
+  <p class="p3"><%= param2 %></p>
+  <% if (title == "Projects") { %>
+    <img 
+        src="/images/Mandala.jpg" 
+        style="width:400px;">
+  <% } else { %>
+    <img src="/images/Blender.jpg">
+  <% } %> 
+
+  <br><br><h3 class="p3"><%= header3 %></h3> 
+  <p class="p3"><%= param3 %></p>
+  <% if (title == "Services") { %>
+    <img src="/images/Playdate.jpg">
+  <% } %> 
+  <% include partials/footer.ejs %>
