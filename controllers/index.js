@@ -1,3 +1,11 @@
+/********************************************************
+* File: index.ejs
+* Student: Kevin Eduardo Curiel Justo
+* ID: 301214229
+* Date: 04/Jun/22
+********************************************************/
+
+
 exports.home = function(req, res, next) {
     res.render('index', { 
         title: 'Home',
