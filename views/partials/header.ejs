@@ -71,6 +71,22 @@
             Contact </a>
         </a>
       </li>
+      <li class="nav-item">
+        <% if (title == "Business Contacts") { %>
+            <a class="nav-link active" href="/businesscontacts/list">
+        <% } else { %>
+            <a class="nav-link" href="/businesscontacts/list">
+        <% } %>            
+            Business Contacts </a>
+        </a>
+      </li>
+      <li class="nav-item">  
+        <% if (typeof userName == 'string' && userName) { %>
+          <a class="nav-link" href="/users/signout" onclick="return confirm('Are you sure?')"><i class="fa fa-door-open"></i> Sign-Out (<%= userName %>)</a>
+        <% } else { %>
+          <a class="nav-link" href="/users/signin"> Sign-in</a>
+        <% } %>            
+      </li> 
       
     </ul>
   </nav>

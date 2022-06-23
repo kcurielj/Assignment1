@@ -1,27 +1,25 @@
 /********************************************************
-* File: users.js
+* File: user.js
 * Student: Kevin Eduardo Curiel Justo
 * ID: 301214229
-* Date: 04/Jun/22
+* Date: 23/Jun/22
 ********************************************************/
 
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let usersController = require('../controllers/user');
+let passport = require('passport');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
 
-/* GET julio page. */
-router.get('/julio', function(req, res, next) {
-  res.render(
-    'users', 
-    { 
-      title: 'Users',
-      name: 'Julio'
-    }
-  );
-});
+// Routes for sign-up
+router.get('/signup', usersController.renderSignup);
+router.post('/signup', usersController.signup);
+
+// Routes for sign-in
+router.get('/signin', usersController.renderSignin);
+router.post('/signin', usersController.signin);
+
+// Route for sign-out
+router.get('/signout', usersController.signout);
 
 module.exports = router;
